@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload = "startTimer()">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
@@ -46,16 +46,15 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2>Summary</a></h2>
-									<p style="text-align:center;"> I'm an ecologist interested in data science. I like to call myself a quantitative ecologist.<br>
-										I have broad research interests within the field of Global Change Ecology and strong programming skills in R, MATLAB and Python. <br>
+									<h2>Summary</h2>
+									<p style="text-align:justify;"> I'm an ecologist interested in data science. I like to call myself a quantitative ecologist.
+										I have broad research interests within the field of Global Change Ecology and strong programming skills in R, MATLAB and Python.
 										I got my master's degree in Global Change Ecology from the University of Bayreuth Germany and a bachelor's degree in Geography from JABU Nigeria.
-										<br>
-										On this website you get an overview of my recent projects.
+										This website presents my recent projects and activities.
 									</p>
 								</header>
-								<a href="#" class="image fit"><img src="images/group.JPG" alt="" /></a>
-						                <p style="text-align:center;">       Modelling Challenges for Mountain Ecosystems (MCME 2019) at the University of Hamburg, 2019 </p>
+								<div href="#" class="image fit"><img id="img" src="images/group.jpg" alt="" style="height:600px;" /> <figcaption id="caption"> Modelling Challenges for Mountain Ecosystems (MCME 2019) at the University of Hamburg, 2019 </figcaption></div>
+
 								<ul class="actions special">
 
 
@@ -73,7 +72,7 @@
 									</a></h2>
 									</header>
 									<!--<a href="#" class="image fit"><img src="images/R.jpg" alt="" /></a>-->
-									<p style="text-align:center;"> This section contains projects written in R. <br>
+									<p> This section contains projects written in R.
 										Please click the button below to open the R-scripts on GitHub </p>
 									<ul class="actions special">
 										<li><a href="https://github.com/emmanuel-cmd/my_portfolio/tree/main/R-projects" class="button" target="_blank">Open GitHub</a></li>
@@ -85,7 +84,7 @@
 										</a></h2>
 									</header>
 									<!--<a href="#" class="image fit"><img src="images/python.jpg" alt="" /></a>-->
-									<p style="text-align:center;">This section contains projects written in Python. <br> They are written basically in IDLE and Jupyter Notebook. Please click the button below to open the Python scripts on GitHub </p>
+									<p>This section contains projects written in Python. They are written basically in IDLE and Jupyter Notebook. Please click the button below to open the Python scripts on GitHub </p>
 
 									<ul class="actions special">
 										<li><a href="https://github.com/emmanuel-cmd/my_portfolio/tree/main/Python-projects" class="button" target="_blank">Open GitHub</a></li>
@@ -110,7 +109,7 @@
 										</a></h2>
 									</header>
 									<!--<a href="#" class="image fit"><img src="images/python.jpg" alt="" /></a>-->
-									<p>Here are shiny applications that I have contributed to: </p>
+									<p style="text-align:center;">Here are RShiny-based web applications that I have contributed to: </p>
 
 									<ul class="actions special">
 										<li><a href="https://tools.climateanalytics.org/tedit/" class="button" target="_blank">TEDIT(Climate Analytics)</a></li>
@@ -135,6 +134,18 @@
 										<li><a href="https://github.com/emmanuel-cmd/my_portfolio/tree/main/MOOC_courses_reports_slides" class="button" target="_blank">Open GitHub</a></li>
 									</ul>
 								</article>
+								<article>
+									<header>
+										<h2>Publication</h2>
+									</header>
+									<!--<a href="#" class="image fit"><img src="images/book.png" alt="" /></a>-->
+									<p>My master thesis titled "High wind speed prevents the establishment of the disease vector mosquito <i>Aedes albopictus</i> in Europe" was published in Frontiers in Environmental Science
+
+
+									<ul class="actions special">
+										<li><a href="https://www.frontiersin.org/articles/10.3389/fenvs.2022.846243/full" class="button" target="_blank">See Publication</a></li>
+									</ul>
+								</article>
 
 						<!-- Footer -->
 
@@ -145,7 +156,7 @@
 						<section class="split contact">
 							<section class="alt">
 								<h3>Address</h3>
-								<p>Frankengutstraße 12, 95447 Bayreuth, Germany.</p>
+								<p>Semmelweisstraße 2, 86156 Augsburg, Germany.</p>
 							</section>
 							<section>
 								<h3>Email</h3>
@@ -159,7 +170,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; 2018-2022</li><li>Designed by Emmanuel Adeleke</li></ul>
+						<ul><li>&copy; 2018-2023</li><li>Designed by Emmanuel Adeleke</li><li><a href="https://emmanuel-cmd.github.io/thefaith-blog/" target="_blank">Faith-Blog</a></li></ul>
 					</div>
 
 			</div>
@@ -172,6 +183,44 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script type = "text/javascript">
+
+			    var images = [];
+					var captions = [];
+			    var x = 0;
+			    var $img = document.getElementById('img');
+					var $cont = document.getElementById('caption');
+
+			    images[0] = "images/group.jpg";
+			    images[1] = "images/lapalma1.jpg";
+					images[2] = "images/lapalma2.jpg";
+					images[3] = "images/lapalma3.jpg";
+					images[4] = "images/lapalma4.jpg";
+					images[5] = "images/lapalma5.jpg";
+					images[6] = "images/lapalma6.jpg";
+
+
+					captions[0] = "Modelling Challenges for Mountain Ecosystems (MCME 2019) at the University of Hamburg, 2019";
+					captions[1] = "La Palma Science School 2019";
+					captions[2] = "";
+					captions[3] = "";
+					captions[4] = "";
+					captions[5] = "";
+					captions[6] = "";
+
+
+			    function displayNextImage() {
+	            $img.src = images[x];
+							$cont.innerHTML = captions[x];
+	            x === 6 ? x = 0 : x++;
+			    }
+					window.onload = function () {
+    					setInterval(displayNextImage, 5000);
+					};
+
+				</script>
+
 
 	</body>
 </html>
